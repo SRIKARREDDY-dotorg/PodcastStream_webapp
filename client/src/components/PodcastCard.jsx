@@ -171,12 +171,13 @@ const PodcastCard = () => {
                 <Avatar style={{ width: "26px", height: "26px" }}>R</Avatar>
                 <CreatorName>Srikar Reddy</CreatorName>
               </Creator>
-              <Views> * 1000 Views</Views>
+              <Views> • 1000 Views</Views>
             </CreatorsInfo>
           </MainInfo>
         </CardInformation>
       </div>
       <PlayIcon>
+        {/* #TODO fix based on backend */}
         {"video" === "video" ? (
             <PlayArrowIcon style={{width: "28px", height: "28px"}}/>
         ) : (

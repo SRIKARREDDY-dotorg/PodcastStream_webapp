@@ -21,13 +21,18 @@ const MenuContainer = styled.div`
   align-items: flex-start;
   background-color: ${({ theme }) => theme.bg};
   color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 2000px) {
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-    max-width: 400px;
-    left: ${({ menuOpen }) => (menuOpen ? "0" : "-100%")};
-    transition: 0.3s ease-in-out;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  max-width: 400px;
+  left: ${({ menuOpen }) => (menuOpen ? "0" : "-100%")};
+  transition: 0.3s ease-in-out;
+  @media (max-width: 768px) {
+    max-width: 300px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 250px;
   }
 `;
 
@@ -58,7 +63,7 @@ const Logo = styled.div`
 
 const Close = styled.div`
   @media (max-width: 2000px) {
-    display: inline-block;
+    display: flex;
   }
   margin-right: 30px;
   padding: 8px;
